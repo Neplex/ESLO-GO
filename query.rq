@@ -28,4 +28,3 @@ SELECT DISTINCT ?title ?description ?src ?lat ?long WHERE {
   ?recordedAt wgs84:lat ?lat .                                                  # latitude  field from object 'recordedAt'
   ?recordedAt wgs84:long ?long .                                                # longitude field from object 'recordedAt'
 }
-LIMIT 10
