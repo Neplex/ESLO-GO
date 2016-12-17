@@ -1,0 +1,31 @@
+# Test querry on http://cocoon.huma-num.fr/sparql
+# Read: https://www.w3.org/TR/rdf-sparql-query/
+#       http://programminghistorian.org/lessons/graph-databases-and-SPARQL
+
+# Prefixs
+PREFIX ore:<http://www.openarchives.org/ore/terms/>
+PREFIX edm:<http://www.europeana.eu/schemas/edm/>
+PREFIX ebucore:<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX cocoon:<http://cocoon.huma-num.fr/schemas/onto/>
+PREFIX wgs84:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+# Select field
+SELECT DISTINCT ?title ?description ?src ?lat ?long WHERE {
+  # 'x' -> un aggregation objects
+  ?x a ore:Aggregation ;
+    edm:hasView ?audio ;                                                        # object 'audio' from field edm:hasView in 'x'
+    edm:aggregatedCHO ?aggregatedCHO .                                          # object 'aggregatedCHO' from field edm:aggregatedCHO in 'x'
+
+  ?audio ebucore:hasMimeType "audio/mpeg" .                                     # audio track is mpeg
+  ?audio foaf:primaryTopic ?src .                                               # audio src field from object 'audio'
+
+  ?aggregatedCHO dc:language <http://lexvo.org/id/iso639-3/fra> .               # Lang FR
+  ?aggregatedCHO dc:title ?title .                                              # title field from object 'aggregatedCHO'
+  ?aggregatedCHO dc:description ?description .                                  # description field from object 'aggregatedCHO'
+  ?aggregatedCHO cocoon:recordedAt ?recordedAt .                                # object 'recordedAt' from object 'aggregatedCHO'
+
+  ?recordedAt wgs84:lat ?lat .                                                  # latitude  field from object 'recordedAt'
+  ?recordedAt wgs84:long ?long .                                                # longitude field from object 'recordedAt'
+}
+LIMIT 10
