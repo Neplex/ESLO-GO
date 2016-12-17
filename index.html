@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SoundGO</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    html, body, #map {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <audio id="audio" autoplay src=""></audio>
+</body>
+
+<script type="text/javascript">
+var map = L.map('map');
+var userPos;
+
+L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+}).addTo( map );
+
+map.locate({setView: true, maxZoom: 20});
+
+function onLocationFound(e) {
+  var radius = e.accuracy / 2;
+  L.marker(e.latlng).addTo(map).bindPopup("You").openPopup();
+  userPos = L.circle(e.latlng, radius).addTo(map);
+}
+
+function onLocationError(e) {
+  alert(e.message);
+  userPos = L.circle([47.900721642273275, 1.9137883186340334], 100).addTo(map);
+  map.setView([47.900721642273275, 1.9137883186340334], 20);
+}
+
+map.on('locationerror', onLocationError);
+map.on('locationfound', onLocationFound);
+//map.on('click', function(e) { console.log(e.latlng); });
+
+var pointsGeoJSON = [
+ {
+    "type": "Feature",
+    "properties": {
+        "name": "Labomedia",
+        "isSound": true,
+        "src": ".//sound.mp3"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [1.9137883186340334, 47.900721642273275]
+    }
+ }
+];
+
+function onEachFeature(feature, layer) {
+  if (feature.properties.isSound) {
+    layer.on('click', function (e) {
+      if (userPos && userPos.getBounds().contains(e.latlng)) {
+        document.getElementById('audio').pause();
+        document.getElementById('audio').src = feature.properties.src;
+        document.getElementById('audio').play();
+      } else {
+        alert("You must walk close to the sound to hear it");
+      }
+    });
+  }
+}
+
+L.geoJSON(pointsGeoJSON, {onEachFeature: onEachFeature}).addTo(map);
+</script>
+</html>
