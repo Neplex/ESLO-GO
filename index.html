@@ -7,7 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="./L.Control.Sidebar.css" />
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.0.0/dist/leaflet.markercluster.js"></script>
+  <script src="./L.Control.Sidebar.js"></script>
 
   <style>
     body {
@@ -23,6 +30,7 @@
 
 <body>
   <div id="map"></div>
+  <div id="sidebar"></div>
   <audio id="audio" autoplay src=""></audio>
 </body>
 
@@ -30,51 +38,41 @@
 var map = L.map('map');
 var userPos;
 
-L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     subdomains: ['a','b','c']
 }).addTo( map );
 
+var sidebar = L.control.sidebar('sidebar', { position: 'right' });
+map.addControl(sidebar);
+sidebar.hide();
+
 map.locate({setView: true, maxZoom: 20});
 
 function onLocationFound(e) {
-  var radius = e.accuracy / 2;
-  L.marker(e.latlng).addTo(map).bindPopup("You").openPopup();
-  userPos = L.circle(e.latlng, radius).addTo(map);
+  L.marker(e.latlng).addTo(map);
+  userPos = L.circle(e.latlng, { radius: e.accuracy * 1.5, color: '#FF0000' }).addTo(map);
 }
 
 function onLocationError(e) {
   alert(e.message);
-  userPos = L.circle([47.900721642273275, 1.9137883186340334], 100).addTo(map);
-  map.setView([47.900721642273275, 1.9137883186340334], 20);
 }
 
 map.on('locationerror', onLocationError);
 map.on('locationfound', onLocationFound);
-//map.on('click', function(e) { console.log(e.latlng); });
-
-var pointsGeoJSON = [
- {
-    "type": "Feature",
-    "properties": {
-        "name": "Labomedia",
-        "isSound": true,
-        "src": ".//sound.mp3"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [1.9137883186340334, 47.900721642273275]
-    }
- }
-];
+map.on('click', function(e) { sidebar.hide(); });
+sidebar.on('hidden', function() { document.getElementById('audio').pause(); });
 
 function onEachFeature(feature, layer) {
   if (feature.properties.isSound) {
     layer.on('click', function (e) {
+      sidebar.hide();
       if (userPos && userPos.getBounds().contains(e.latlng)) {
         document.getElementById('audio').pause();
         document.getElementById('audio').src = feature.properties.src;
         document.getElementById('audio').play();
+        sidebar.setContent("<h1>" + feature.properties.title + "</h1><p>" + feature.properties.description + "</p>");
+        sidebar.show();
       } else {
         alert("You must walk close to the sound to hear it");
       }
@@ -82,6 +80,34 @@ function onEachFeature(feature, layer) {
   }
 }
 
-L.geoJSON(pointsGeoJSON, {onEachFeature: onEachFeature}).addTo(map);
+var query = "./data.json";
+$.getJSON( query, function( data ) {
+  console.log("DATA: loaded");
+  var pointsGeoJSON = [];
+  for (var i = 0; i < data.results.bindings.length; i++) {
+    var e = data.results.bindings[i];
+    var p = {};
+
+    p.type = "Feature";
+    p.properties = {};
+    p.properties.title = e.title.value;
+    p.properties.description = e.description.value;
+    p.properties.isSound = true;
+    p.properties.src = e.src.value;
+    p.geometry = {};
+    p.geometry.type = "Point";
+    p.geometry.coordinates = [];
+    p.geometry.coordinates[0] = parseFloat(e.long.value);
+    p.geometry.coordinates[1] = parseFloat(e.lat.value);
+
+    pointsGeoJSON.push(p);
+  }
+
+  console.log("GeoJSON: created");
+  var markers = L.markerClusterGroup();
+  markers.addLayer(L.geoJSON(pointsGeoJSON, {onEachFeature: onEachFeature}));
+  map.addLayer(markers);
+  console.log("GeoJSON: loaded");
+});
 </script>
 </html>
