@@ -47,7 +47,6 @@ var sidebar = L.control.sidebar('sidebar', { position: 'right' });
 map.addControl(sidebar);
 sidebar.hide();
 
-map.locate({setView: true, maxZoom: 20});
 
 function onLocationFound(e) {
   L.marker(e.latlng).addTo(map);
@@ -62,6 +61,8 @@ map.on('locationerror', onLocationError);
 map.on('locationfound', onLocationFound);
 map.on('click', function(e) { sidebar.hide(); });
 sidebar.on('hidden', function() { document.getElementById('audio').pause(); });
+
+map.locate({watch: true, setView: true, maxZoom: 20});
 
 function onEachFeature(feature, layer) {
   if (feature.properties.isSound) {
