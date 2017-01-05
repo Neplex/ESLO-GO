@@ -36,7 +36,7 @@
 
 <script type="text/javascript">
 var map = L.map('map');
-var userPos;
+var userMark, userPos;
 
 L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -49,7 +49,9 @@ sidebar.hide();
 
 
 function onLocationFound(e) {
-  L.marker(e.latlng).addTo(map);
+  map.removeLayer(userMark);
+  map.removeLayer(userPos);
+  userMark = L.marker(e.latlng).addTo(map);
   userPos = L.circle(e.latlng, { radius: e.accuracy * 1.5, color: '#FF0000' }).addTo(map);
 }
 
