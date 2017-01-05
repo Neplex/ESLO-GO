@@ -49,10 +49,13 @@ sidebar.hide();
 
 
 function onLocationFound(e) {
-  map.removeLayer(userMark);
-  map.removeLayer(userPos);
-  userMark = L.marker(e.latlng).addTo(map);
-  userPos = L.circle(e.latlng, { radius: e.accuracy * 1.5, color: '#FF0000' }).addTo(map);
+  if (userMark) {
+    userMark.setLatLng(e.latlng);
+    userPos.setLatLng(e.latlng);
+  } else {
+    userMark = L.marker(e.latlng).addTo(map);
+    userPos = L.circle(e.latlng, { radius: e.accuracy * 1.5, color: '#FF0000' }).addTo(map);
+  }
 }
 
 function onLocationError(e) {
