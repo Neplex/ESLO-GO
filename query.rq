@@ -24,6 +24,9 @@ SELECT DISTINCT ?title ?description ?src ?lat ?long WHERE {
   ?aggregatedCHO dc:title ?title .                                              # title field from object 'aggregatedCHO'
   ?aggregatedCHO dc:description ?description .                                  # description field from object 'aggregatedCHO'
   ?aggregatedCHO cocoon:recordedAt ?recordedAt .                                # object 'recordedAt' from object 'aggregatedCHO'
+  { ?aggregatedCHO edm:isGatheredInto <http://cocoon.huma-num.fr/pub/COLLECTION_crdo-COLLECTION_ESLO_OMELETTE> } UNION
+  { ?aggregatedCHO edm:isGatheredInto <http://cocoon.huma-num.fr/pub/COLLECTION_crdo-COLLECTION_ESLO1> } UNION
+  { ?aggregatedCHO edm:isGatheredInto <http://cocoon.huma-num.fr/pub/COLLECTION_crdo-COLLECTION_ESLO2> }
 
   ?recordedAt wgs84:lat ?lat .                                                  # latitude  field from object 'recordedAt'
   ?recordedAt wgs84:long ?long .                                                # longitude field from object 'recordedAt'
