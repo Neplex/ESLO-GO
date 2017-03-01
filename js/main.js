@@ -50,7 +50,7 @@ function onEachFeature(feature, layer) {
   }
 }
 
-$.getJSON("data/trophy.js", function(data) {
+$.getJSON("data/trophy.json", function(data) {
   for (var i = 0; i < data.length; i++) {
     var trophy = $("<li></li>").addClass('trophy disabled');
     var img    = $("<img>").attr('src', data[i].src);
