@@ -6,114 +6,54 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="./L.Control.Sidebar.css" />
+  <link rel="stylesheet" href="css/L.Control.Drawer.css" />
+  <link rel="stylesheet" href="css/L.Control.Sidebar.css" />
+  <link rel="stylesheet" href="css/main.css" />
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.0.0/dist/leaflet.markercluster.js"></script>
-  <script src="./L.Control.Sidebar.js"></script>
-
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-    html, body, #map {
-      height: 100vh;
-      width: 100vw;
-    }
-  </style>
+  <script src="js/L.Control.Drawer.js"></script>
+  <script src="js/L.Control.Sidebar.js"></script>
 </head>
 
 <body>
-  <div id="map"></div>
-  <div id="sidebar"></div>
+  <div id="sidebar" class="sidebar collapsed">
+    <!-- Nav tabs -->
+    <div class="sidebar-tabs">
+      <ul role="tablist">
+        <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+        <li><a href="#trophy" role="tab"><i class="fa fa-trophy"></i></a></li>
+      </ul>
+
+      <ul role="tablist">
+        <li><a href="https://github.com/Neplex/ESLO-GO" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="sidebar-content">
+      <div class="sidebar-pane" id="home">
+        <h1 class="sidebar-header">Quésaco ?<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="sidebar-pane" id="trophy">
+        <h1 class="sidebar-header">Trophées<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        <ul id="trophy-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="map" class="sidebar-map"></div>
+  <div id="drawer"></div>
   <audio id="audio" autoplay src=""></audio>
 </body>
 
-<script type="text/javascript">
-var map = L.map('map');
-var userMark, userPos;
+<script src="js/main.js"></script>
 
-L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    subdomains: ['a','b','c']
-}).addTo( map );
-
-var sidebar = L.control.sidebar('sidebar', { position: 'right' });
-map.addControl(sidebar);
-sidebar.hide();
-
-
-function onLocationFound(e) {
-  if (userMark) {
-    userMark.setLatLng(e.latlng);
-    userPos.setLatLng(e.latlng);
-  } else {
-    userMark = L.marker(e.latlng).addTo(map);
-    userPos = L.circle(e.latlng, { radius: e.accuracy * 1.5, color: '#FF0000' }).addTo(map);
-  }
-}
-
-function onLocationError(e) {
-  alert(e.message);
-}
-
-map.on('locationerror', onLocationError);
-map.on('locationfound', onLocationFound);
-map.on('click', function(e) { sidebar.hide(); });
-sidebar.on('hidden', function() { document.getElementById('audio').pause(); });
-
-map.locate({watch: true, setView: true, maxZoom: 20});
-
-function onEachFeature(feature, layer) {
-  if (feature.properties.isSound) {
-    layer.on('click', function (e) {
-      sidebar.hide();
-      if (userPos && userPos.getBounds().contains(e.latlng)) {
-        document.getElementById('audio').pause();
-        document.getElementById('audio').src = feature.properties.src;
-        document.getElementById('audio').play();
-        sidebar.setContent("<h1>" + feature.properties.title + "</h1><p>" + feature.properties.description + "</p>");
-        sidebar.show();
-      } else {
-        alert("You must walk close to the sound to hear it");
-      }
-    });
-  }
-}
-
-var query = "./data.json";
-$.getJSON( query, function( data ) {
-  console.log("DATA: loaded");
-  var pointsGeoJSON = [];
-  for (var i = 0; i < data.results.bindings.length; i++) {
-    var e = data.results.bindings[i];
-    var p = {};
-
-    p.type = "Feature";
-    p.properties = {};
-    p.properties.title = e.title.value;
-    p.properties.description = e.description.value;
-    p.properties.isSound = true;
-    p.properties.src = e.src.value;
-    p.geometry = {};
-    p.geometry.type = "Point";
-    p.geometry.coordinates = [];
-    p.geometry.coordinates[0] = parseFloat(e.long.value);
-    p.geometry.coordinates[1] = parseFloat(e.lat.value);
-
-    pointsGeoJSON.push(p);
-  }
-
-  console.log("GeoJSON: created");
-  var markers = L.markerClusterGroup();
-  markers.addLayer(L.geoJSON(pointsGeoJSON, {onEachFeature: onEachFeature}));
-  map.addLayer(markers);
-  console.log("GeoJSON: loaded");
-});
-</script>
 </html>

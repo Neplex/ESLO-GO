@@ -1,4 +1,4 @@
-L.Control.Sidebar = L.Control.extend({
+L.Control.Drawer = L.Control.extend({
 
     includes: L.Mixin.Events,
 
@@ -19,9 +19,9 @@ L.Control.Sidebar = L.Control.extend({
 
         var l = 'leaflet-';
 
-        // Create sidebar container
+        // Create drawer container
         var container = this._container =
-            L.DomUtil.create('div', l + 'sidebar ' + this.options.position);
+            L.DomUtil.create('div', l + 'drawer ' + this.options.position);
 
         // Style and attach content container
         L.DomUtil.addClass(content, l + 'control');
@@ -52,7 +52,7 @@ L.Control.Sidebar = L.Control.extend({
             .on(container, 'webkitTransitionEnd',
                 this._handleTransitionEvent, this);
 
-        // Attach sidebar container to controls container
+        // Attach drawer container to controls container
         var controlContainer = map._controlContainer;
         controlContainer.insertBefore(container, controlContainer.firstChild);
 
@@ -80,7 +80,7 @@ L.Control.Sidebar = L.Control.extend({
         var container = this._container;
         var content = this._contentContainer;
 
-        // Remove sidebar container from controls container
+        // Remove drawer container from controls container
         var controlContainer = map._controlContainer;
         controlContainer.removeChild(container);
 
@@ -192,6 +192,6 @@ L.Control.Sidebar = L.Control.extend({
     }
 });
 
-L.control.sidebar = function (placeholder, options) {
-    return new L.Control.Sidebar(placeholder, options);
+L.control.drawer = function (placeholder, options) {
+    return new L.Control.Drawer(placeholder, options);
 };
