@@ -1,13 +1,16 @@
 [
-  {"img": "img/trophy1.png", "title": "Premier pas", "desc": "Bravo ! Vous venez d'ecouter votre premier son."},
-  {"img": "img/trophy10.png", "title": "Top 10", "desc": ""},
-  {"img": "img/trophy20.png", "title": "", "desc": ""},
-  {"img": "img/trophy30.png", "title": "", "desc": ""},
-  {"img": "img/trophy40.png", "title": "", "desc": ""},
-  {"img": "img/trophy50.png", "title": "", "desc": ""},
-  {"img": "img/trophy60.png", "title": "", "desc": ""},
-  {"img": "img/trophy70.png", "title": "", "desc": ""},
-  {"img": "img/trophy80.png", "title": "", "desc": ""},
-  {"img": "img/trophy90.png", "title": "", "desc": ""},
-  {"img": "img/trophy100.png", "title": "Le 100e !", "desc": ""}
+  {"img": "img/trophy1.jpg", "title": "Premier pas", "desc": "Bravo ! Vous venez d'écouter votre premier son.", "condition": "nsl", "value": 1},
+  {"img": "img/trophy10.jpg", "title": "Top 10", "desc": "10 sons écouté", "condition": "nsl", "value": 10},
+  {"img": "img/trophy20.jpg", "title": "Top 20", "desc": "20 sons écouté", "condition": "nsl", "value": 20},
+  {"img": "img/trophy30.jpg", "title": "Top 30", "desc": "30 sons écouté", "condition": "nsl", "value": 30},
+  {"img": "img/trophy40.jpg", "title": "Top 40", "desc": "40 sons écouté", "condition": "nsl", "value": 40},
+  {"img": "img/trophy50.jpg", "title": "Top 50", "desc": "50 sons écouté", "condition": "nsl", "value": 50},
+  {"img": "img/trophy60.jpg", "title": "Top 60", "desc": "60 sons écouté", "condition": "nsl", "value": 60},
+  {"img": "img/trophy70.jpg", "title": "Top 70", "desc": "70 sons écouté", "condition": "nsl", "value": 70},
+  {"img": "img/trophy80.jpg", "title": "Top 80", "desc": "80 sons écouté", "condition": "nsl", "value": 80},
+  {"img": "img/trophy90.jpg", "title": "Top 90", "desc": "90 sons écouté", "condition": "nsl", "value": 90},
+  {"img": "img/trophy100.jpg", "title": "Le 100e !", "desc": "100 sons écouté", "condition": "nsl", "value": 100},
+
+  {"img": "img/trophy2.jpg", "title": "Pour être sûr", "desc": "Vous avez écouté un son deux fois.", "condition": "ntsl", "value": 2},
+  {"img": "img/trophy10.jpg", "title": "J'aime ce son", "desc": "Vous adorer tellement ce son que vous l'avez écouté 10 fois.", "condition": "ntsl", "value": 10}
 ]

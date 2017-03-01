@@ -1,6 +1,36 @@
 var map = L.map('map');
 var userMark, userPos;
 
+var userData = {
+
+    data: {
+      "sounds": []
+    },
+
+    load: function () {
+        var the_cookie = document.cookie.split(';');
+        if (the_cookie[0]) {
+            this.data = unescape(the_cookie[0]).parseJSON();
+        }
+        return this.data;
+    },
+
+    save: function (expires, path) {
+        var d = expires || new Date(2020, 02, 02);
+        var p = path || '/';
+        document.cookie = escape(this.data.toJSONString())
+                          + ';path=' + p
+                          + ';expires=' + d.toUTCString();
+    },
+
+    delete: function () {
+        this.save(new Date(1970, 01, 01));
+    }
+
+}
+
+userData.load();
+
 L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     subdomains: ['a','b','c']
@@ -38,11 +68,24 @@ function onEachFeature(feature, layer) {
     layer.on('click', function (e) {
       drawer.hide();
       if (userPos && userPos.getBounds().contains(e.latlng)) {
+        // Play sound
         $('#audio').pause();
         $('#audio').src = feature.properties.src;
         $('#audio').play();
+
+        // Show info
         drawer.setContent("<h1>" + feature.properties.title + "</h1><p>" + feature.properties.description + "</p>");
         drawer.show();
+
+        // Add it to the userData
+        var sound = userData.data.sounds.find(function(value) { return value.id === this.properties.id }, feature);
+        if (sound) {
+          sound.nbEcoute += 1;
+        } else {
+          userData.data.sounds.push({"id": feature.properties.id, "nbEcoute": 1});
+        }
+        userData.save();
+        reloadTrophy();
       } else {
         alert("Vous devez marcher à proximité du son pour pouvoir l'ecouter");
       }
@@ -50,20 +93,40 @@ function onEachFeature(feature, layer) {
   }
 }
 
-$.getJSON("data/trophy.json", function(data) {
-  console.log("TROPHY: loaded");
-  for (var i = 0; i < data.length; i++) {
-    var trophy = $("<li></li>").addClass('trophy disabled');
-    var img    = $("<img>").attr('src', data[i].img);
-    var div    = $("<div></div>");
-    var title  = $("<h1></h1>").text(data[i].title);
-    var desc   = $("<p></p>").text(data[i].desc);
+function reloadTrophy() {
+  $.getJSON("data/trophy.json", function(data) {
+    console.log("TROPHY: loaded");
+    for (var i = 0; i < data.length; i++) {
+      var trophy = $("<li></li>").addClass('trophy');
+      var img    = $("<img>").attr('src', data[i].img);
+      var div    = $("<div></div>");
+      var title  = $("<h1></h1>").text(data[i].title);
+      var desc   = $("<p></p>").text(data[i].desc);
 
-    div.append(title).append(desc);
-    trophy.append(img).append(div);
-    $('#trophy-list').append(trophy);
-  }
-});
+      switch (data[i].condition) {
+        case 'nsl':
+          if (userData.data.sounds.length < data[i].value)
+            trophy.addClass('disabled');
+          break;
+
+        case 'ntsl':
+          var sound = userData.data.sounds.find(function(value) { return value.nbEcoute >= this.value }, data[i]);
+          if (!sound)
+            trophy.addClass('disabled');
+          break;
+
+        default:
+          trophy.addClass('disabled');
+      }
+
+      div.append(title).append(desc);
+      trophy.append(img).append(div);
+      $('#trophy-list').append(trophy);
+    }
+  });
+};
+
+reloadTrophy();
 
 var query = "data/data.json";
 $.getJSON(query, function(data) {
@@ -75,6 +138,7 @@ $.getJSON(query, function(data) {
 
     p.type = "Feature";
     p.properties = {};
+    p.properties.id = i;
     p.properties.title = e.title.value;
     p.properties.description = e.description.value;
     p.properties.isSound = true;
