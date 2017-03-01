@@ -54,7 +54,7 @@ $.getJSON("data/trophy.json", function(data) {
   console.log("TROPHY: loaded");
   for (var i = 0; i < data.length; i++) {
     var trophy = $("<li></li>").addClass('trophy disabled');
-    var img    = $("<img>").attr('src', data[i].src);
+    var img    = $("<img>").attr('src', data[i].img);
     var div    = $("<div></div>");
     var title  = $("<h1></h1>").text(data[i].title);
     var desc   = $("<p></p>").text(data[i].desc);
