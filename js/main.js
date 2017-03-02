@@ -8,7 +8,8 @@ var userData = {
     },
 
     load: function () {
-      this.data = JSON.parse(localStorage.getItem("userData"));
+      var data = JSON.parse(localStorage.getItem("userData"));
+      if (data) this.data = data;
       return this.data;
     },
 
@@ -22,7 +23,7 @@ var userData = {
 
 }
 
-userData.load();
+userData.load()
 
 L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
