@@ -3,31 +3,77 @@ var userMark, userPos;
 
 var userData = {
 
-    data: {
-      "sounds": []
-    },
+  data: {
+    "sounds": []
+  },
 
-    load: function () {
-      var data = JSON.parse(localStorage.getItem("userData"));
-      if (data) this.data = data;
-      return this.data;
-    },
+  load: function () {
+    var data = JSON.parse(localStorage.getItem("userData"));
+    if (data) this.data = data;
+    return this.data;
+  },
 
-    save: function () {
-      localStorage.setItem("userData", JSON.stringify(this.data));
-    },
+  save: function () {
+    localStorage.setItem("userData", JSON.stringify(this.data));
+  },
 
-    delete: function () {
-      localStorage.removeItem("userData");
-    }
+  delete: function () {
+    localStorage.removeItem("userData");
+  }
 
 }
 
-userData.load()
+var trophy = {
+
+  fileName: "data/trophy.json",
+
+  reload: function () {
+    $.getJSON(this.fileName, function(data) {
+      console.log("TROPHY: loaded");
+      $('#trophy-list').html("");
+      for (var i = 0; i < data.length; i++) {
+        var trophy = $("<li></li>").addClass('trophy');
+        var img    = $("<img>").attr('src', data[i].img);
+        var div    = $("<div></div>");
+        var title  = $("<h1></h1>").text(data[i].title);
+        var desc   = $("<p></p>").text(data[i].desc);
+
+        switch (data[i].condition) {
+          case 'nsl':
+          if (userData.data.sounds.length < data[i].value)
+          trophy.addClass('disabled');
+          break;
+
+          case 'ntsl':
+          var sound = userData.data.sounds.find(function(value) { return value.nbEcoute >= this.value }, data[i]);
+          if (!sound)
+          trophy.addClass('disabled');
+          break;
+
+          default:
+          trophy.addClass('disabled');
+        }
+
+        div.append(title).append(desc);
+        trophy.append(img).append(div);
+        $('#trophy-list').append(trophy);
+      }
+    });
+  },
+
+  delete: function() {
+    userData.delete();
+    this.reload();
+  }
+
+}
+
+userData.load();
+trophy.reload();
 
 L.tileLayer( 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    subdomains: ['a','b','c']
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  subdomains: ['a','b','c']
 }).addTo( map );
 
 var sidebar = L.control.sidebar('sidebar').addTo(map);
@@ -37,7 +83,6 @@ drawer.hide();
 
 
 function onLocationFound(e) {
-  alert(e)
   if (userMark) {
     userMark.setLatLng(e.latlng);
     userPos.setLatLng(e.latlng);
@@ -83,49 +128,13 @@ function onEachFeature(feature, layer) {
           userData.data.sounds.push({ "id": feature.properties.id, "nbEcoute": 1 });
         }
         userData.save();
-        reloadTrophy();
+        trophy.reload();
       } else {
         alert("Vous devez marcher à proximité du son pour pouvoir l'ecouter");
       }
     });
   }
 }
-
-function reloadTrophy() {
-  $.getJSON("data/trophy.json", function(data) {
-    console.log("TROPHY: loaded");
-    $('#trophy-list').html("");
-    for (var i = 0; i < data.length; i++) {
-      var trophy = $("<li></li>").addClass('trophy');
-      var img    = $("<img>").attr('src', data[i].img);
-      var div    = $("<div></div>");
-      var title  = $("<h1></h1>").text(data[i].title);
-      var desc   = $("<p></p>").text(data[i].desc);
-
-      switch (data[i].condition) {
-        case 'nsl':
-          if (userData.data.sounds.length < data[i].value)
-            trophy.addClass('disabled');
-          break;
-
-        case 'ntsl':
-          var sound = userData.data.sounds.find(function(value) { return value.nbEcoute >= this.value }, data[i]);
-          if (!sound)
-            trophy.addClass('disabled');
-          break;
-
-        default:
-          trophy.addClass('disabled');
-      }
-
-      div.append(title).append(desc);
-      trophy.append(img).append(div);
-      $('#trophy-list').append(trophy);
-    }
-  });
-};
-
-reloadTrophy();
 
 var query = "data/data.json";
 $.getJSON(query, function(data) {
