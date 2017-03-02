@@ -8,23 +8,16 @@ var userData = {
     },
 
     load: function () {
-        var the_cookie = document.cookie.split(';');
-        if (the_cookie[0]) {
-            this.data = unescape(the_cookie[0]).parseJSON();
-        }
-        return this.data;
+      this.data = JSON.parse(localStorage.getItem("userData"));
+      return this.data;
     },
 
-    save: function (expires, path) {
-        var d = expires || new Date(2020, 02, 02);
-        var p = path || '/';
-        document.cookie = escape(this.data.toJSONString())
-                          + ';path=' + p
-                          + ';expires=' + d.toUTCString();
+    save: function () {
+      localStorage.setItem("userData", JSON.stringify(this.data));
     },
 
     delete: function () {
-        this.save(new Date(1970, 01, 01));
+      localStorage.removeItem("userData");
     }
 
 }
@@ -43,12 +36,14 @@ drawer.hide();
 
 
 function onLocationFound(e) {
+  alert(e)
   if (userMark) {
     userMark.setLatLng(e.latlng);
     userPos.setLatLng(e.latlng);
   } else {
     userMark = L.marker(e.latlng).addTo(map);
-    userPos = L.circle(e.latlng, { radius: e.accuracy * 1.5, color: '#FF0000' }).addTo(map);
+    userPos = L.circle(e.latlng, { radius: 4, color: '#FF0000' }).addTo(map);
+    map.setView(e.latlng, 20);
   }
 }
 
@@ -61,7 +56,8 @@ map.on('locationfound', onLocationFound);
 map.on('click', function(e) { drawer.hide(); sidebar.close(); });
 drawer.on('hidden', function() { document.getElementById('audio').pause(); });
 
-map.locate({watch: true, setView: true, maxZoom: 20});
+map.setView([0, 0], 0);
+map.locate({watch: true});
 
 function onEachFeature(feature, layer) {
   if (feature.properties.isSound) {
@@ -69,9 +65,10 @@ function onEachFeature(feature, layer) {
       drawer.hide();
       if (userPos && userPos.getBounds().contains(e.latlng)) {
         // Play sound
-        $('#audio').pause();
-        $('#audio').src = feature.properties.src;
-        $('#audio').play();
+        var audio = $('#audio')[0];
+        audio.pause();
+        audio.src = feature.properties.src;
+        audio.play();
 
         // Show info
         drawer.setContent("<h1>" + feature.properties.title + "</h1><p>" + feature.properties.description + "</p>");
@@ -82,7 +79,7 @@ function onEachFeature(feature, layer) {
         if (sound) {
           sound.nbEcoute += 1;
         } else {
-          userData.data.sounds.push({"id": feature.properties.id, "nbEcoute": 1});
+          userData.data.sounds.push({ "id": feature.properties.id, "nbEcoute": 1 });
         }
         userData.save();
         reloadTrophy();
@@ -96,6 +93,7 @@ function onEachFeature(feature, layer) {
 function reloadTrophy() {
   $.getJSON("data/trophy.json", function(data) {
     console.log("TROPHY: loaded");
+    $('#trophy-list').html("");
     for (var i = 0; i < data.length; i++) {
       var trophy = $("<li></li>").addClass('trophy');
       var img    = $("<img>").attr('src', data[i].img);
