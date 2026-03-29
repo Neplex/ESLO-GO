@@ -1,0 +1,9 @@
+{
+  "name": "ESLO-GO: Explore Orleans",
+  "short_name": "ESLO-GO",
+  "description": "Explore the city of Orleans through historical sounds.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#b3a57f"
+}
