@@ -1,60 +1,255 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>SoundGO</title>
+    <meta charset="utf-8">
+    <title>ESLO-GO | Explore Orleans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="manifest" href="manifest.json">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@1.7.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-main: #b3a57f;
+            --color-track: #e5e7eb;
+        }
 
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-  <link rel="stylesheet" href="//unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.css" />
-  <link rel="stylesheet" href="//unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="css/L.Control.Drawer.css" />
-  <link rel="stylesheet" href="css/L.Control.Sidebar.css" />
-  <link rel="stylesheet" href="css/main.css" />
+        @custom-variant dark (&:where(.dark, .dark *));
 
-  <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="//unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-  <script src="//unpkg.com/leaflet.markercluster@1.0.0/dist/leaflet.markercluster.js"></script>
-  <script src="js/L.Control.Drawer.js"></script>
-  <script src="js/L.Control.Sidebar.js"></script>
+        @layer base {
+            :root { --track-color: #e5e7eb; }
+            .dark { --track-color: #1f2937; }
+
+            body {
+                @apply bg-zinc-50 dark:bg-zinc-950 text-zinc-500 dark:text-zinc-400 transition-colors duration-300 overflow-hidden h-screen flex flex-col font-sans;
+            }
+        }
+
+        @layer components {
+            .ui-card {
+                @apply bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-xl p-4 space-y-3;
+
+                h3 {
+                    @apply font-bold text-zinc-900 dark:text-white;
+                }
+            }
+
+            .ui-select {
+                @apply bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm rounded-lg border-none focus:ring-2 focus:ring-main p-2;
+            }
+
+            #info-title-counter {
+                @apply bg-main/20 text-main px-1.5 py-0.5 rounded font-bold mr-2 align-middle;
+            }
+
+            .leaflet-container { background: transparent !important; }
+
+            .panel-overlay {
+                @apply fixed inset-0 z-40 transform transition-transform duration-300 bg-zinc-50 dark:bg-zinc-950 p-6 pt-12 overflow-y-auto;
+
+                header {
+                    @apply flex items-center justify-between mb-8 text-left;
+
+                    h2 {
+                        @apply text-3xl font-bold text-zinc-900 dark:text-white;
+                    }
+                }
+            }
+
+            .view-close {
+                @apply p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full shadow-lg transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-700;
+            }
+
+            .nav-btn {
+                @apply flex flex-col items-center space-y-1 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-xs font-bold uppercase tracking-widest;
+            }
+
+            .nav-btn.active {
+                @apply text-main;
+            }
+        }
+    </style>
+
+    <!-- Leaflet & Plugins -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
+    <script src="https://unpkg.com/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <script src="js/state.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/player.js" defer></script>
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
-  <div id="sidebar" class="sidebar collapsed">
-    <!-- Nav tabs -->
-    <div class="sidebar-tabs">
-      <ul role="tablist">
-        <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-        <li><a href="#trophy" role="tab"><i class="fa fa-trophy"></i></a></li>
-      </ul>
 
-      <ul role="tablist">
-        <li><a href="//github.com/Neplex/ESLO-GO" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
-      </ul>
+<main id="map" class="flex-grow z-0"></main>
+
+<!-- Notifications -->
+<div id="toast" role="status" aria-live="polite" aria-atomic="true"
+     class="fixed top-8 left-1/2 -translate-x-1/2 z-[100] transform -translate-y-24 opacity-0 transition-all duration-500 pointer-events-none text-center">
+    <div class="bg-main text-black px-4 py-2 rounded-full shadow-2xl flex items-center space-x-3 font-bold text-sm">
+        <i data-lucide="info" class="w-4 h-4"></i>
+        <span id="toast-message">Message</span>
     </div>
+</div>
 
-    <!-- Tab panes -->
-    <div class="sidebar-content">
-      <div class="sidebar-pane" id="home">
-        <h1 class="sidebar-header">Quésaco ?<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      </div>
-
-      <div class="sidebar-pane" id="trophy">
-        <h1 class="sidebar-header">Trophées<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-        <ul id="trophy-list"></ul>
-        <input type="button" value="Je veux recommencer !" onclick="trophy.delete();" />
-      </div>
+<!-- Audio Player / Feature Details -->
+<aside inert id="info-panel"
+       class="ui-card fixed bottom-24 left-4 right-4 p-4 space-y-3 transform translate-y-[200%] transition-transform duration-500 z-50">
+    <div class="flex items-center space-x-4">
+        <div id="info-panel-image-wrapper"
+             class="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-lg shadow-lg flex-shrink-0 flex items-center justify-center overflow-hidden">
+            <i data-lucide="music" class="text-main w-8 h-8"></i>
+        </div>
+        <h3 id="info-title" class="flex-grow text-lg">...</h3>
+        <button id="player-close" class="p-2">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
     </div>
-  </div>
+    <div id="info-desc" class="text-sm">...</div>
 
-  <div id="map" class="sidebar-map"></div>
-  <div id="drawer"></div>
-  <audio id="audio" autoplay src=""></audio>
+    <div class="space-y-3">
+        <div class="flex items-center space-x-2">
+            <span id="current-time" class="text-xs text-left flex-shrink-0">0:00</span>
+            <input type="range" id="seek-slider"
+                   class="flex-grow h-1 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-main hover:h-1.5 transition-all"
+                   value="0" min="0">
+            <span id="total-duration" class="text-xs text-right flex-shrink-0">0:00</span>
+        </div>
+
+        <div class="flex items-center justify-between">
+            <select id="speed-select" class="ui-select text-xs">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1.0x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2.0x</option>
+            </select>
+
+            <div class="flex items-center space-x-6">
+                <button id="prev-btn">
+                    <i data-lucide="skip-back" class="w-5 h-5"></i>
+                </button>
+                <button id="play-btn"
+                        class="bg-main text-black rounded-full p-3 hover:scale-105 active:scale-95 transition-transform shadow-lg">
+                    <i data-lucide="play" fill="black" class="w-6 h-6"></i>
+                </button>
+                <button id="next-btn">
+                    <i data-lucide="skip-forward" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center w-20 group">
+                <i data-lucide="volume-2" class="w-5 h-5 mr-2"></i>
+                <input type="range" id="volume-slider"
+                       class="w-full h-1 bg-zinc-200 dark:bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-main"
+                       value="100">
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- Views / Overlays -->
+<section inert id="trophies-view" class="panel-overlay translate-x-full">
+    <header>
+        <h2>Trophées</h2>
+        <button class="view-close" data-target="#trophies-view">
+            <i data-lucide="x"></i>
+        </button>
+    </header>
+    <div id="trophy-list" class="grid grid-cols-1 gap-4 pb-24"></div>
+</section>
+
+<section inert id="settings-view" class="panel-overlay translate-x-full text-left">
+    <header>
+        <h2>Paramètres</h2>
+        <button class="view-close" data-target="#settings-view">
+            <i data-lucide="x"></i>
+        </button>
+    </header>
+    <div class="space-y-6">
+        <section class="ui-card">
+            <h3>Apparence</h3>
+            <div class="flex items-center justify-between">
+                <span class="text-sm">Thème</span>
+                <select id="theme-toggle" class="ui-select w-32">
+                    <option value="system">Système</option>
+                    <option value="light">Clair</option>
+                    <option value="dark">Sombre</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="ui-card">
+            <h3>Données</h3>
+            <button id="reset-btn"
+                    class="w-full py-3 bg-red-500/10 text-red-500 rounded-lg text-sm font-bold border border-red-500/20 active:scale-95 transition-transform">
+                Réinitialiser ma progression
+            </button>
+        </section>
+
+        <section id="dev-section" class="ui-card hidden">
+            <h3>Mode Développeur</h3>
+            <div class="flex items-center justify-between">
+                <span class="text-sm">Désactiver la condition de proximité</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="dev-mode-toggle" class="sr-only peer">
+                    <span class="w-11 h-6 bg-zinc-300 dark:bg-zinc-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-main"></span>
+                </label>
+            </div>
+        </section>
+
+        <section class="ui-card">
+            <h3>À propos</h3>
+            <p class="text-sm">
+                Explorez Orléans à travers ses archives sonores. Une application ludique pour (re)découvrir le patrimoine linguistique et culturel de la ville.
+            </p>
+            <ul role="list" class="divide-y divide-zinc-100 dark:divide-zinc-800">
+                <li>
+                    <a href="https://github.com/Neplex/ESLO-GO" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-x-4 pt-4 pb-4">
+                        <div class="min-w-0 flex-auto">
+                            <p class="text-sm font-semibold text-main">GitHub</p>
+                            <p class="mt-1 text-xs">Code source du projet</p>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 shrink-0"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://eslo.huma-num.fr/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-x-4 pt-4 pb-4">
+                        <div class="min-w-0 flex-auto">
+                            <p class="text-sm font-semibold text-main">Le projet ESLO</p>
+                            <p class="mt-1 text-xs">
+                                L'Enquête SocioLinguistique à Orléans est un projet majeur de constitution d'un corpus de "français parlé".
+                            </p>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-5 h-5 shrink-0"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</section>
+
+<!-- Nav -->
+<nav class="fixed bottom-0 left-0 right-0 px-4 py-3 flex justify-around items-center z-50 border-t bg-white/90 dark:bg-zinc-950/95 backdrop-blur-xl border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+    <button id="nav-map" class="nav-btn active">
+        <i data-lucide="compass"></i>
+        <span>Explorer</span>
+    </button>
+    <button id="nav-trophies" class="nav-btn">
+        <i data-lucide="award"></i>
+        <span>Succès</span>
+    </button>
+    <button id="nav-settings" class="nav-btn">
+        <i data-lucide="settings"></i>
+        <span>Réglages</span>
+    </button>
+</nav>
+
+<audio id="audio" class="hidden"></audio>
+
 </body>
-
-<script src="js/main.js"></script>
-
 </html>
