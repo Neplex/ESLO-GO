@@ -3,6 +3,7 @@
 #       http://programminghistorian.org/lessons/graph-databases-and-SPARQL
 
 # Prefixs
+PREFIX dc:<http://purl.org/dc/elements/1.1/>
 PREFIX ore:<http://www.openarchives.org/ore/terms/>
 PREFIX edm:<http://www.europeana.eu/schemas/edm/>
 PREFIX ebucore:<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#>
@@ -11,7 +12,7 @@ PREFIX cocoon:<http://cocoon.huma-num.fr/schemas/onto/>
 PREFIX wgs84:<http://www.w3.org/2003/01/geo/wgs84_pos#>
 
 # Select field
-SELECT DISTINCT ?title ?description ?src ?lat ?long WHERE {
+SELECT DISTINCT ?id ?title ?description ?src ?lat ?long WHERE {
   # 'x' -> un aggregation objects
   ?x a ore:Aggregation ;
     edm:hasView ?audio ;                                                        # object 'audio' from field edm:hasView in 'x'
@@ -22,12 +23,14 @@ SELECT DISTINCT ?title ?description ?src ?lat ?long WHERE {
 
   ?aggregatedCHO dc:language <http://lexvo.org/id/iso639-3/fra> .               # Lang FR
   ?aggregatedCHO dc:title ?title .                                              # title field from object 'aggregatedCHO'
-  ?aggregatedCHO dc:description ?description .                                  # description field from object 'aggregatedCHO'
+  OPTIONAL { ?aggregatedCHO dc:description ?description }                       # description field from object 'aggregatedCHO'
   ?aggregatedCHO cocoon:recordedAt ?recordedAt .                                # object 'recordedAt' from object 'aggregatedCHO'
-  { ?aggregatedCHO edm:isGatheredInto <http://cocoon.huma-num.fr/pub/COLLECTION_crdo-COLLECTION_ESLO_OMELETTE> } UNION
-  { ?aggregatedCHO edm:isGatheredInto <http://cocoon.huma-num.fr/pub/COLLECTION_crdo-COLLECTION_ESLO1> } UNION
-  { ?aggregatedCHO edm:isGatheredInto <http://cocoon.huma-num.fr/pub/COLLECTION_crdo-COLLECTION_ESLO2> }
-
   ?recordedAt wgs84:lat ?lat .                                                  # latitude  field from object 'recordedAt'
   ?recordedAt wgs84:long ?long .                                                # longitude field from object 'recordedAt'
+
+  ?aggregatedCHO edm:isGatheredInto ?collection .
+  ?collection dc:title ?collectionTitle .
+
+  FILTER(CONTAINS(LCASE(?collectionTitle), "eslo"))
+  BIND(?aggregatedCHO AS ?id)
 }
