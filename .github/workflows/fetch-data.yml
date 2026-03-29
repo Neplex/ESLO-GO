@@ -33,4 +33,4 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
-          message: ':card_file_box: Update data from COCOON [skip ci]'
+          message: ':card_file_box: Update data from COCOON'
