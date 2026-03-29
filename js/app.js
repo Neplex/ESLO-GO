@@ -76,20 +76,20 @@ $(document).ready(function () {
 
     $.getJSON("data/data.json", function (data) {
         const grouped = {};
-        data.results.bindings.forEach((e, i) => {
-            const key = e.lat.value + "," + e.long.value;
+        data.forEach((e) => {
+            const key = e.lat + "," + e.long;
             if (!grouped[key]) grouped[key] = [];
             grouped[key].push({
                 type: "Feature",
                 properties: {
-                    id: e.src.value,
-                    title: e.title.value,
-                    description: e.description.value,
-                    src: e.src.value,
+                    id: e.id,
+                    title: e.title,
+                    description: e.description,
+                    src: e.src,
                 },
                 geometry: {
                     type: "Point",
-                    coordinates: [parseFloat(e.long.value), parseFloat(e.lat.value)],
+                    coordinates: [e.long, e.lat],
                 }
             });
         });
