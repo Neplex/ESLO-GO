@@ -61,9 +61,9 @@ $(document).ready(function () {
     let trophyData;
 
     // --- Initial Load ---
-    State.load();
-    MapManager.init();
     lucide.createIcons();
+    MapManager.init();
+    State.load();
 
     // --- Data Loading ---
     $.getJSON("data/trophy.json", (data) => {

@@ -1,16 +1,18 @@
 window.MapManager = (function () {
-    let map, userMark, userAccuracyCircle;
-    let markers;
+    let map, tiles, markers;
+    let userMark, userAccuracyCircle;
 
     function init() {
         map = L.map('map', {
             zoomControl: false,
         });
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        tiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/{theme}/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; CARTO',
             maxZoom: 20,
-        }).addTo(map);
+            theme: 'light'
+        });
+        tiles.addTo(map);
 
         markers = L.markerClusterGroup({
             showCoverageOnHover: false,
@@ -29,6 +31,11 @@ window.MapManager = (function () {
             setView: true,
             maxZoom: 18,
         });
+    }
+
+    function setTileTheme(theme) {
+        tiles.options.theme = theme;
+        tiles.redraw();
     }
 
     function onLocationFound(e) {
@@ -88,5 +95,5 @@ window.MapManager = (function () {
         });
     }
 
-    return {init, addPoints};
+    return {init, setTileTheme, addPoints};
 })();

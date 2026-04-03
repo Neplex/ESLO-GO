@@ -46,8 +46,10 @@ window.State = (function () {
         const root = document.documentElement;
         if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             root.classList.add('dark');
+            MapManager.setTileTheme('dark_all');
         } else {
             root.classList.remove('dark');
+            MapManager.setTileTheme('light_all');
         }
     }
 
