@@ -64,14 +64,6 @@
     "long": 1.894
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-03d73015-4ba2-3cc8-93f5-960d6fca0b53",
-    "title": "ESLO1: discussion en clôture de la séquence d'entretien 251",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCLO_251.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-0495ebc6-4a1f-33bc-abfa-e569feb1ad61",
     "title": "ESLO1: entretien 096",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
@@ -192,14 +184,6 @@
     "long": 1.913
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-0ccc84a4-b9ef-3f9c-93e3-b839069f975d",
-    "title": "ESLO1: réunion 295",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_295.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-0cf4141e-18d1-3609-b95b-9b93fc453466",
     "title": "ESLO - Omelette bande 091",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960. Le sous-corpus \"omelette\" représente les 96 réponses à la question sur la recette de l'omelette posée au cours des entretiens en face-à-face.",
@@ -248,44 +232,12 @@
     "long": 1.9
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-1162219b-44b5-3457-8d08-e8cdd7d37867",
-    "title": "ESLO1: discussion en ouverture de la séquence d'entretien 250",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTOUV_250.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-120c6253-e6c3-3011-bc8c-00701cfaa4ba",
-    "title": "ESLO1: visite d'un lieu de travail 604",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_VISIT_604.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-16195b98-5a7e-3869-bae4-e12117885ae8",
-    "title": "ESLO1: réunion 551",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_551.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-162d4f4d-f3f1-320c-b332-19518fc29918",
     "title": "ESLO1: entretien 131",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
     "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_131.mp3",
     "lat": 47.898,
     "long": 1.893
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-16b6dbec-7bba-3d3b-9335-2b1734e0e7de",
-    "title": "ESLO1: repas 274",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_274.mp3",
-    "lat": 47.9,
-    "long": 1.9
   },
   {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-1834af72-8130-3b17-a63f-9a0eca810e2c",
@@ -376,14 +328,6 @@
     "long": 1.9
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-1c351e11-4af6-3774-ae8c-17cc89f04356",
-    "title": "ESLO1: interview de personnalité 429",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_INTPERS_429.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-1e5a2cf6-3002-3a62-af70-48c27d13aeff",
     "title": "ESLO1: entretien 087",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
@@ -440,14 +384,6 @@
     "long": 1.903
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-224a262f-823e-3500-acf0-c49821e5fb45",
-    "title": "ESLO1: conversation téléphonique 304",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_304.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-2386328d-532c-338f-83b8-43d3e847d185",
     "title": "ESLO - Omelette bande 108",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960. Le sous-corpus \"omelette\" représente les 96 réponses à la question sur la recette de l'omelette posée au cours des entretiens en face-à-face.",
@@ -486,14 +422,6 @@
     "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_133.mp3",
     "lat": 47.91,
     "long": 1.893
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-29f1fb0f-2db7-3e4a-aacc-3788c024a76e",
-    "title": "ESLO1: contact avant entretien 236",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_236.mp3",
-    "lat": 47.9,
-    "long": 1.9
   },
   {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-2ce24247-bc25-3d0e-a323-29a84dc952a2",
@@ -632,14 +560,6 @@
     "long": 1.923
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-3b241d27-70ce-3c54-8962-4c7172879bd6",
-    "title": "ESLO1: consultation au centre médico-psycho-pedagogique 752",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_CONSCMPP_752.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-3cb11a4c-acff-3912-945c-7bc56ec5bcc7",
     "title": "ESLO1: entretien 002",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
@@ -662,14 +582,6 @@
     "src": "http://cocoon.huma-num.fr/data/eslo/masters/OMELETTE_049.mp3",
     "lat": 47.904,
     "long": 1.907
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-3f3cc586-ca7b-31fc-9e6e-a8213fe9f040",
-    "title": "ESLO1: contact avant entretien 233",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_233.mp3",
-    "lat": 47.9,
-    "long": 1.9
   },
   {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-3fcf40fe-5b70-309f-bfe0-4991b7da900f",
@@ -744,22 +656,6 @@
     "long": 1.907
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-4c8510ce-70ab-3e08-ae14-d5cb53b2b8bb",
-    "title": "ESLO1: enregistrements divers 292",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_DIV_292.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-4cb9662f-268a-3dee-9273-337213a1e520",
-    "title": "ESLO1: consultation au centre médico-psycho-pedagogique 751",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_CONSCMPP_751.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-4d44ff60-f3d8-3ac5-8379-10ffaba15f1c",
     "title": "ESLO - Omelette bande 078",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960. Le sous-corpus \"omelette\" représente les 96 réponses à la question sur la recette de l'omelette posée au cours des entretiens en face-à-face.",
@@ -824,14 +720,6 @@
     "long": 1.9
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-51a94b03-a14e-33ba-ac76-45db12c16ba4",
-    "title": "ESLO1: contact avant entretien 227",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_227.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-51d7c978-dac7-3b5e-958b-91fc04bab0a8",
     "title": "ESLO1: entretien 044",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
@@ -854,14 +742,6 @@
     "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_149.mp3",
     "lat": 47.898,
     "long": 1.892
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-529b6c13-358b-3ba7-a7bb-a50780a5a3f5",
-    "title": "ESLO1: repas 278",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_278.mp3",
-    "lat": 47.9,
-    "long": 1.9
   },
   {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-5438e184-87b1-3777-b562-3d65a186c1e8",
@@ -916,14 +796,6 @@
     "title": "ESLO1: entretien 090",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
     "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_090.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-59f8d6e9-9a2a-35f8-bdeb-d26f2d1facf8",
-    "title": "ESLO1: contact avant entretien 225",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_225.mp3",
     "lat": 47.9,
     "long": 1.9
   },
@@ -2352,14 +2224,6 @@
     "long": 1.908
   },
   {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-5c530e4d-750b-3b28-b70c-6ec50b15d413",
-    "title": "ESLO1: contact avant entretien 226",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_226.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-c81a1847-62b0-3c0c-a1df-09ab70c02dfc",
     "title": "ESLO - Omelette bande 112",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960. Le sous-corpus \"omelette\" représente les 96 réponses à la question sur la recette de l'omelette posée au cours des entretiens en face-à-face.",
@@ -2712,6 +2576,334 @@
     "long": 1.927
   },
   {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-03d73015-4ba2-3cc8-93f5-960d6fca0b53",
+    "title": "ESLO1: discussion en clôture de la séquence d'entretien 251",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCLO_251.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-0ccc84a4-b9ef-3f9c-93e3-b839069f975d",
+    "title": "ESLO1: réunion 295",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_295.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-1162219b-44b5-3457-8d08-e8cdd7d37867",
+    "title": "ESLO1: discussion en ouverture de la séquence d'entretien 250",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTOUV_250.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-120c6253-e6c3-3011-bc8c-00701cfaa4ba",
+    "title": "ESLO1: visite d'un lieu de travail 604",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_VISIT_604.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-16195b98-5a7e-3869-bae4-e12117885ae8",
+    "title": "ESLO1: réunion 551",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_551.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-16b6dbec-7bba-3d3b-9335-2b1734e0e7de",
+    "title": "ESLO1: repas 274",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_274.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-1c351e11-4af6-3774-ae8c-17cc89f04356",
+    "title": "ESLO1: interview de personnalité 429",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_INTPERS_429.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-224a262f-823e-3500-acf0-c49821e5fb45",
+    "title": "ESLO1: conversation téléphonique 304",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_304.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-29f1fb0f-2db7-3e4a-aacc-3788c024a76e",
+    "title": "ESLO1: contact avant entretien 236",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_236.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-3b241d27-70ce-3c54-8962-4c7172879bd6",
+    "title": "ESLO1: consultation au centre médico-psycho-pedagogique 752",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_CONSCMPP_752.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-3f3cc586-ca7b-31fc-9e6e-a8213fe9f040",
+    "title": "ESLO1: contact avant entretien 233",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_233.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-4c8510ce-70ab-3e08-ae14-d5cb53b2b8bb",
+    "title": "ESLO1: enregistrements divers 292",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_DIV_292.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-4cb9662f-268a-3dee-9273-337213a1e520",
+    "title": "ESLO1: consultation au centre médico-psycho-pedagogique 751",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_CONSCMPP_751.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-51a94b03-a14e-33ba-ac76-45db12c16ba4",
+    "title": "ESLO1: contact avant entretien 227",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_227.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-529b6c13-358b-3ba7-a7bb-a50780a5a3f5",
+    "title": "ESLO1: repas 278",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_278.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-59f8d6e9-9a2a-35f8-bdeb-d26f2d1facf8",
+    "title": "ESLO1: contact avant entretien 225",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_225.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-5c530e4d-750b-3b28-b70c-6ec50b15d413",
+    "title": "ESLO1: contact avant entretien 226",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_226.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-6223cb7c-2904-38f9-ae24-671bba1694c3",
+    "title": "ESLO1: contact avant entretien 209",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_209.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-646ebaa1-15cd-3e70-b28c-5c76ca0d4463",
+    "title": "ESLO1: contact avant entretien 222",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_222.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-669d6db4-b76c-3ebd-82b5-0c9ffd8f5354",
+    "title": "ESLO1: conversation téléphonique 306",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_306.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-6788f9d4-258b-31ae-be6f-1073fd5ff297",
+    "title": "ESLO1: réunion 297",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_297.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-67c19e3b-9e48-3dce-ad23-0c2fe913a544",
+    "title": "ESLO1: contact avant entretien 219",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_219.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-6ec9dca1-283a-3296-bba9-0688c16be2fa",
+    "title": "ESLO1: contact avant entretien 228",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_228.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-7c5ffebb-9afb-376d-97e4-d87ea7156e02",
+    "title": "ESLO1: entretien 016",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_016.mp3",
+    "lat": 47.926,
+    "long": 1.895
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-879e24ee-44f1-37ed-8177-e409f8d349f4",
+    "title": "ESLO1: repas 276",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_276.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8a813c27-81d6-39d4-bc20-ce6a27d7c869",
+    "title": "ESLO1: conversation téléphonique 312",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_312.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8c5ddb87-a4f4-374e-8d69-3447ad6bac43",
+    "title": "ESLO1: entretien 049",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_049.mp3",
+    "lat": 47.904,
+    "long": 1.907
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8cde8c3a-9756-343f-a35b-dcf6d18f597e",
+    "title": "ESLO1: discussion en clôture de la séquence d'entretien 256",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCLO_256.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8cdef10c-c605-3459-99a6-a87b902e61a0",
+    "title": "ESLO1: contact avant entretien 218",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_218.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8ebe600d-1070-34b9-80f2-394bbb1beb4a",
+    "title": "ESLO1: interview de personnalité 414",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_INTPERS_414.mp3",
+    "lat": 47.904,
+    "long": 1.906
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-982e27bb-6fd2-3199-bcc2-797a643ce752",
+    "title": "ESLO1: réunion 296",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_296.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-9b9554af-f8ae-3f7f-9615-cc65068465d6",
+    "title": "ESLO1: contact avant entretien 234",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_234.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-a8d124f7-9194-3a68-a35a-7406f9c9bbaf",
+    "title": "ESLO1: repas 275",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_275.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-aa87e835-adce-32df-a766-d0384286b5b6",
+    "title": "ESLO1: conversation téléphonique 305",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_305.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-af821f0d-52d1-33e6-a646-ba1c1f015dde",
+    "title": "ESLO1: discussion en ouverture de la séquence d'entretien 252",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTOUV_252.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-b3165054-58a1-3122-aa89-430d918f7143",
+    "title": "ESLO1: conversation téléphonique 351",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_351.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-c4153991-d7a8-3597-a8af-816172da5782",
+    "title": "ESLO1: conversation téléphonique 308",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_308.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-cdc7a26a-37bd-33ca-9fc3-401ff094cb49",
+    "title": "ESLO1: visite d'un lieu de travail 601",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_VISIT_601.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-d00baf5e-14c3-383e-9a4e-3d1649b64caa",
+    "title": "ESLO1: visite d'un lieu de travail 602",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_VISIT_602.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-d6266c57-afb7-3be1-8d56-8e46d54e0232",
+    "title": "ESLO1: interview de personnalité 407",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_INTPERS_407.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-dfda9260-f277-3da5-af3c-ddfc09dd1720",
+    "title": "ESLO1: contact avant entretien 210",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_210.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-ecbda402-982a-3ed6-a09d-fb7e5bad31c7",
     "title": "ESLO1: entretien 109",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
@@ -2824,6 +3016,14 @@
     "long": 1.9
   },
   {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-fb0b9b13-5592-32a8-accd-00c919065b47",
+    "title": "ESLO1: contact avant entretien 235",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_235.mp3",
+    "lat": 47.9,
+    "long": 1.9
+  },
+  {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-fc20ca84-d409-3368-9ef5-8c7afb4120a8",
     "title": "ESLO - Omelette bande 075",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960. Le sous-corpus \"omelette\" représente les 96 réponses à la question sur la recette de l'omelette posée au cours des entretiens en face-à-face.",
@@ -2878,6 +3078,14 @@
     "src": "http://cocoon.huma-num.fr/data/eslo/masters/OMELETTE_026.mp3",
     "lat": 47.905,
     "long": 1.91
+  },
+  {
+    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-fd1beecd-1c0d-3b61-a24f-a7fa73a4ca4e",
+    "title": "ESLO1: contact avant entretien 213",
+    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
+    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_213.mp3",
+    "lat": 47.9,
+    "long": 1.9
   },
   {
     "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-fd6cce58-7cc6-330c-95ce-d44462bef3ae",
@@ -3420,214 +3628,6 @@
     "title": "ESLO1: conversation téléphonique 343",
     "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
     "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_343.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-6223cb7c-2904-38f9-ae24-671bba1694c3",
-    "title": "ESLO1: contact avant entretien 209",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_209.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-646ebaa1-15cd-3e70-b28c-5c76ca0d4463",
-    "title": "ESLO1: contact avant entretien 222",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_222.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-669d6db4-b76c-3ebd-82b5-0c9ffd8f5354",
-    "title": "ESLO1: conversation téléphonique 306",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_306.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-6788f9d4-258b-31ae-be6f-1073fd5ff297",
-    "title": "ESLO1: réunion 297",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_297.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-67c19e3b-9e48-3dce-ad23-0c2fe913a544",
-    "title": "ESLO1: contact avant entretien 219",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_219.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-6ec9dca1-283a-3296-bba9-0688c16be2fa",
-    "title": "ESLO1: contact avant entretien 228",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_228.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-7c5ffebb-9afb-376d-97e4-d87ea7156e02",
-    "title": "ESLO1: entretien 016",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_016.mp3",
-    "lat": 47.926,
-    "long": 1.895
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-879e24ee-44f1-37ed-8177-e409f8d349f4",
-    "title": "ESLO1: repas 276",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_276.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8a813c27-81d6-39d4-bc20-ce6a27d7c869",
-    "title": "ESLO1: conversation téléphonique 312",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_312.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8c5ddb87-a4f4-374e-8d69-3447ad6bac43",
-    "title": "ESLO1: entretien 049",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENT_049.mp3",
-    "lat": 47.904,
-    "long": 1.907
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8cde8c3a-9756-343f-a35b-dcf6d18f597e",
-    "title": "ESLO1: discussion en clôture de la séquence d'entretien 256",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCLO_256.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8cdef10c-c605-3459-99a6-a87b902e61a0",
-    "title": "ESLO1: contact avant entretien 218",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_218.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-8ebe600d-1070-34b9-80f2-394bbb1beb4a",
-    "title": "ESLO1: interview de personnalité 414",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_INTPERS_414.mp3",
-    "lat": 47.904,
-    "long": 1.906
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-982e27bb-6fd2-3199-bcc2-797a643ce752",
-    "title": "ESLO1: réunion 296",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REU_296.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-9b9554af-f8ae-3f7f-9615-cc65068465d6",
-    "title": "ESLO1: contact avant entretien 234",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_234.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-a8d124f7-9194-3a68-a35a-7406f9c9bbaf",
-    "title": "ESLO1: repas 275",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_REPAS_275.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-aa87e835-adce-32df-a766-d0384286b5b6",
-    "title": "ESLO1: conversation téléphonique 305",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_305.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-af821f0d-52d1-33e6-a646-ba1c1f015dde",
-    "title": "ESLO1: discussion en ouverture de la séquence d'entretien 252",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTOUV_252.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-b3165054-58a1-3122-aa89-430d918f7143",
-    "title": "ESLO1: conversation téléphonique 351",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_351.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-c4153991-d7a8-3597-a8af-816172da5782",
-    "title": "ESLO1: conversation téléphonique 308",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_TEL_308.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-cdc7a26a-37bd-33ca-9fc3-401ff094cb49",
-    "title": "ESLO1: visite d'un lieu de travail 601",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_VISIT_601.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-d00baf5e-14c3-383e-9a4e-3d1649b64caa",
-    "title": "ESLO1: visite d'un lieu de travail 602",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_VISIT_602.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-d6266c57-afb7-3be1-8d56-8e46d54e0232",
-    "title": "ESLO1: interview de personnalité 407",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_INTPERS_407.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-dfda9260-f277-3da5-af3c-ddfc09dd1720",
-    "title": "ESLO1: contact avant entretien 210",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_210.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-fb0b9b13-5592-32a8-accd-00c919065b47",
-    "title": "ESLO1: contact avant entretien 235",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_235.mp3",
-    "lat": 47.9,
-    "long": 1.9
-  },
-  {
-    "id": "http://cocoon.huma-num.fr/pub/CHO_cocoon-fd1beecd-1c0d-3b61-a24f-a7fa73a4ca4e",
-    "title": "ESLO1: contact avant entretien 213",
-    "description": "Extrait du corpus d'Orléans, réalisé dans le cadre de l'Enquête SocioLinguistique à Orléans à la fin des années 1960.",
-    "src": "http://cocoon.huma-num.fr/data/eslo/ESLO1_ENTCONT_213.mp3",
     "lat": 47.9,
     "long": 1.9
   },
