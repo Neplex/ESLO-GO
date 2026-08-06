@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>ESLO-GO | Explore Orleans</title>
+    <title>ESLO-GO | Explorez Orléans</title>
+    <meta name="description" content="Explorez Orléans à travers ses archives sonores. Une application ludique pour (re)découvrir le patrimoine linguistique et culturel de la ville.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="google-site-verification" content="C3f4U0di9zxWmENJ1ygHRE2kcZtLukgoqttNziqXBHg" />
     <link rel="manifest" href="manifest.json">
@@ -186,8 +187,7 @@
 
         <section class="ui-card">
             <h3>Données</h3>
-            <button id="reset-btn"
-                    class="w-full py-3 bg-red-500/10 text-red-500 rounded-lg text-sm font-bold border border-red-500/20 active:scale-95 transition-transform">
+            <button id="reset-btn" class="w-full py-3 bg-red-500/10 text-red-500 rounded-lg text-sm font-bold border border-red-500/20 active:scale-95 transition-transform">
                 Réinitialiser ma progression
             </button>
         </section>
@@ -203,33 +203,62 @@
             </div>
         </section>
 
-        <section class="ui-card">
-            <h3>À propos</h3>
-            <p class="text-sm">
-                Explorez Orléans à travers ses archives sonores. Une application ludique pour (re)découvrir le patrimoine linguistique et culturel de la ville.
-            </p>
-            <ul role="list" class="divide-y divide-zinc-100 dark:divide-zinc-800">
-                <li>
-                    <a href="https://github.com/Neplex/ESLO-GO" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-x-4 pt-4 pb-4">
-                        <div class="min-w-0 flex-auto">
-                            <p class="text-sm font-semibold text-main">GitHub</p>
-                            <p class="mt-1 text-xs">Code source du projet</p>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-5 h-5 shrink-0"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://eslo.huma-num.fr/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-x-4 pt-4 pb-4">
-                        <div class="min-w-0 flex-auto">
-                            <p class="text-sm font-semibold text-main">Le projet ESLO</p>
-                            <p class="mt-1 text-xs">
-                                L'Enquête SocioLinguistique à Orléans est un projet majeur de constitution d'un corpus de "français parlé".
-                            </p>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-5 h-5 shrink-0"></i>
-                    </a>
-                </li>
-            </ul>
+        <section class="ui-card" itemscope itemtype="https://schema.org/AboutPage">
+            <h3 itemprop="name">À propos</h3>
+        
+            <div itemprop="mainEntity" itemscope itemtype="https://schema.org/SoftwareApplication">
+                <meta itemprop="name" content="ESLO-GO">
+                <meta itemprop="applicationCategory" content="EducationalApplication">
+                <meta itemprop="operatingSystem" content="Web">
+        
+                <p class="text-sm" itemprop="description">
+                    Explorez Orléans à travers ses archives sonores. Une application ludique pour (re)découvrir le patrimoine linguistique et culturel de la ville.
+                </p>
+        
+                <ul role="list" class="divide-y divide-zinc-100 dark:divide-zinc-800">
+                    <li>
+                        <a href="https://github.com/Neplex/ESLO-GO"
+                           target="_blank"
+                           itemprop="subjectOf"
+                           itemscope
+                           itemtype="https://schema.org/SoftwareSourceCode"
+                           class="flex items-center justify-between gap-x-4 pt-4 pb-4">
+                        
+                            <meta itemprop="name" content="ESLO-GO source code">
+                            <link itemprop="codeRepository" href="https://github.com/Neplex/ESLO-GO">
+                        
+                            <div class="min-w-0 flex-auto">
+                                <p class="text-sm font-semibold text-main">GitHub</p>
+                                <p class="mt-1 text-xs">Code source du projet</p>
+                            </div>
+                        
+                            <i data-lucide="chevron-right" class="w-5 h-5 shrink-0"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://eslo.huma-num.fr/"
+                           target="_blank"
+                           itemprop="isBasedOn"
+                           itemscope
+                           itemtype="https://schema.org/Dataset"
+                           class="flex items-center justify-between gap-x-4 pt-4 pb-4">
+        
+                            <meta itemprop="name" content="Enquête SocioLinguistique à Orléans (ESLO)">
+                            <meta itemprop="url" content="https://eslo.huma-num.fr/">
+        
+                            <div class="min-w-0 flex-auto">
+                                <p class="text-sm font-semibold text-main">Le projet ESLO</p>
+                                <p class="mt-1 text-xs">
+                                    <span itemprop="description">
+                                        L'Enquête SocioLinguistique à Orléans est un projet majeur de constitution d'un corpus de "français parlé".
+                                    </span>
+                                </p>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-5 h-5 shrink-0"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
 </section>
